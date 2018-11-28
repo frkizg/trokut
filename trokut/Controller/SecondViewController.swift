@@ -18,6 +18,12 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
         
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -25,7 +31,12 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        trokutArray.sort(by: {$0.povrsinaTrokuta() > $1.povrsinaTrokuta() })
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "trokutCell", for: indexPath) as? TrokutCell else { return UITableViewCell() }
+        cell.configureCell(trokut: trokutArray[indexPath.row])
+        return cell
     }
 
 }
