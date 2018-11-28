@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		45E2AFC421AF21BE001D2316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E2AFC321AF21BE001D2316 /* AppDelegate.swift */; };
-		45E2AFC621AF21BE001D2316 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E2AFC521AF21BE001D2316 /* FirstViewController.swift */; };
-		45E2AFC821AF21BE001D2316 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E2AFC721AF21BE001D2316 /* SecondViewController.swift */; };
+		45E2AFC621AF21BE001D2316 /* UnosPodatakaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E2AFC521AF21BE001D2316 /* UnosPodatakaVC.swift */; };
+		45E2AFC821AF21BE001D2316 /* PregledPodataka.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E2AFC721AF21BE001D2316 /* PregledPodataka.swift */; };
 		45E2AFCB21AF21BE001D2316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45E2AFC921AF21BE001D2316 /* Main.storyboard */; };
 		45E2AFCD21AF21BE001D2316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45E2AFCC21AF21BE001D2316 /* Assets.xcassets */; };
 		45E2AFD021AF21BE001D2316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45E2AFCE21AF21BE001D2316 /* LaunchScreen.storyboard */; };
@@ -41,8 +41,8 @@
 /* Begin PBXFileReference section */
 		45E2AFC021AF21BE001D2316 /* trokut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trokut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E2AFC321AF21BE001D2316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		45E2AFC521AF21BE001D2316 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		45E2AFC721AF21BE001D2316 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		45E2AFC521AF21BE001D2316 /* UnosPodatakaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnosPodatakaVC.swift; sourceTree = "<group>"; };
+		45E2AFC721AF21BE001D2316 /* PregledPodataka.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregledPodataka.swift; sourceTree = "<group>"; };
 		45E2AFCA21AF21BE001D2316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45E2AFCC21AF21BE001D2316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45E2AFCF21AF21BE001D2316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -157,8 +157,8 @@
 		45E2AFFB21AF2A1F001D2316 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				45E2AFC521AF21BE001D2316 /* FirstViewController.swift */,
-				45E2AFC721AF21BE001D2316 /* SecondViewController.swift */,
+				45E2AFC521AF21BE001D2316 /* UnosPodatakaVC.swift */,
+				45E2AFC721AF21BE001D2316 /* PregledPodataka.swift */,
 				45E2AFF521AF29BA001D2316 /* PovrsinaTrokutaVC.swift */,
 			);
 			path = Controller;
@@ -305,9 +305,9 @@
 			files = (
 				45E2AFF621AF29BA001D2316 /* PovrsinaTrokutaVC.swift in Sources */,
 				45E2AFF421AF237C001D2316 /* Trokut.swift in Sources */,
-				45E2AFC821AF21BE001D2316 /* SecondViewController.swift in Sources */,
+				45E2AFC821AF21BE001D2316 /* PregledPodataka.swift in Sources */,
 				45E2AFC421AF21BE001D2316 /* AppDelegate.swift in Sources */,
-				45E2AFC621AF21BE001D2316 /* FirstViewController.swift in Sources */,
+				45E2AFC621AF21BE001D2316 /* UnosPodatakaVC.swift in Sources */,
 				45E2AFFE21AF350D001D2316 /* helpers.swift in Sources */,
 				45E2B00021AF3761001D2316 /* TrokutCell.swift in Sources */,
 			);

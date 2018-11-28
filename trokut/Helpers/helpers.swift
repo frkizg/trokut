@@ -8,6 +8,10 @@
 
 import Foundation
 
+
+
 var trokutArray = [Trokut]()
+
+
 
 

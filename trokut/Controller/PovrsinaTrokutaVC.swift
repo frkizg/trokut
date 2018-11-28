@@ -10,13 +10,13 @@ import UIKit
 
 class PovrsinaTrokutaVC: UIViewController {
 
-    var trokut:Trokut!
+    var povrsina:Double!
     
     @IBOutlet weak var povrsinaLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         povrsinaLbl.text = "Površina trokuta je \(trokut.povrsinaTrokuta()) "
+         povrsinaLbl.text = "Površina trokuta je \(povrsina!)"
     }
     
     

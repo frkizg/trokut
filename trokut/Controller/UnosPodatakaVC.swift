@@ -8,29 +8,42 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class UnosPodatakaVC: UIViewController {
 
     @IBOutlet weak var textFieldStranicaA: UITextField!
     @IBOutlet weak var textFieldStranicaB: UITextField!
     @IBOutlet weak var textFieldStranicaC: UITextField!
     
-    var trokut = Trokut()
+   //(stranicaA: 0, stranicaB: 0, stranicaC: 0, datum: NSDate())
+
+    var povrsina = 0.0
+    var userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+       
+        if trokutArray.count < 1{
+            loadData()
+        }
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        saveData()
+    }
+    
     @IBAction func izracunaBtnPressed(_ sender: Any) {
         
         if let stranicaA = Double(textFieldStranicaA.text!), let stranicaB = Double(textFieldStranicaB.text!), let stranicaC = Double(textFieldStranicaC.text!){
             
-            trokut.stranicaA = stranicaA
-            trokut.stranicaB = stranicaB
-            trokut.stranicaC = stranicaC
+             let trokut = Trokut(stranicaA: stranicaA, stranicaB: stranicaB, stranicaC: stranicaC, datum: NSDate())
             
+//            trokut.stranicaA = stranicaA
+//            trokut.stranicaB = stranicaB
+//            trokut.stranicaC = stranicaC
+//            trokut.datumStvaranja = NSDate()
             trokutArray.append(trokut)
+            
+            povrsina = trokut.povrsinaTrokuta()
             
             performSegue(withIdentifier: "toPovrsinaTrokutaVC", sender: self)
             
@@ -49,11 +62,22 @@ class FirstViewController: UIViewController {
                 debugPrint("PovrsinaTrokutaVC not initialised")
                 return }
             
-            povrsinaTrokutaVC.trokut = trokut
+            povrsinaTrokutaVC.povrsina = povrsina
         }
         
     }
+    func saveData(){
+        
+        let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: trokutArray)
+        userDefaults.set(encodedData, forKey: "trokuti")
+        userDefaults.synchronize()
+    }
     
-
+    func loadData(){
+        if let decoded  = userDefaults.object(forKey: "trokuti") as? Data{
+            trokutArray = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [Trokut]
+        }
+        
+    }
 }
 
