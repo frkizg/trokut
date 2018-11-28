@@ -15,6 +15,10 @@
 		45E2AFD021AF21BE001D2316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45E2AFCE21AF21BE001D2316 /* LaunchScreen.storyboard */; };
 		45E2AFDB21AF21BF001D2316 /* trokutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E2AFDA21AF21BF001D2316 /* trokutTests.swift */; };
 		45E2AFE621AF21BF001D2316 /* trokutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E2AFE521AF21BF001D2316 /* trokutUITests.swift */; };
+		45E2AFF421AF237C001D2316 /* Trokut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E2AFF321AF237C001D2316 /* Trokut.swift */; };
+		45E2AFF621AF29BA001D2316 /* PovrsinaTrokutaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E2AFF521AF29BA001D2316 /* PovrsinaTrokutaVC.swift */; };
+		45E2AFFE21AF350D001D2316 /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E2AFFD21AF350D001D2316 /* helpers.swift */; };
+		45E2B00021AF3761001D2316 /* TrokutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E2AFFF21AF3761001D2316 /* TrokutCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		45E2AFE121AF21BF001D2316 /* trokutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = trokutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E2AFE521AF21BF001D2316 /* trokutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trokutUITests.swift; sourceTree = "<group>"; };
 		45E2AFE721AF21BF001D2316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45E2AFF321AF237C001D2316 /* Trokut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trokut.swift; sourceTree = "<group>"; };
+		45E2AFF521AF29BA001D2316 /* PovrsinaTrokutaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PovrsinaTrokutaVC.swift; sourceTree = "<group>"; };
+		45E2AFFD21AF350D001D2316 /* helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
+		45E2AFFF21AF3761001D2316 /* TrokutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrokutCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +107,11 @@
 		45E2AFC221AF21BE001D2316 /* trokut */ = {
 			isa = PBXGroup;
 			children = (
+				45E2AFFC21AF34FF001D2316 /* Helpers */,
+				45E2AFFB21AF2A1F001D2316 /* Controller */,
+				45E2AFF921AF2A12001D2316 /* View */,
+				45E2AFF721AF29FF001D2316 /* Model */,
 				45E2AFC321AF21BE001D2316 /* AppDelegate.swift */,
-				45E2AFC521AF21BE001D2316 /* FirstViewController.swift */,
-				45E2AFC721AF21BE001D2316 /* SecondViewController.swift */,
 				45E2AFC921AF21BE001D2316 /* Main.storyboard */,
 				45E2AFCC21AF21BE001D2316 /* Assets.xcassets */,
 				45E2AFCE21AF21BE001D2316 /* LaunchScreen.storyboard */,
@@ -126,6 +136,40 @@
 				45E2AFE721AF21BF001D2316 /* Info.plist */,
 			);
 			path = trokutUITests;
+			sourceTree = "<group>";
+		};
+		45E2AFF721AF29FF001D2316 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45E2AFF321AF237C001D2316 /* Trokut.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		45E2AFF921AF2A12001D2316 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45E2AFFF21AF3761001D2316 /* TrokutCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		45E2AFFB21AF2A1F001D2316 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				45E2AFC521AF21BE001D2316 /* FirstViewController.swift */,
+				45E2AFC721AF21BE001D2316 /* SecondViewController.swift */,
+				45E2AFF521AF29BA001D2316 /* PovrsinaTrokutaVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		45E2AFFC21AF34FF001D2316 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				45E2AFFD21AF350D001D2316 /* helpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +303,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45E2AFF621AF29BA001D2316 /* PovrsinaTrokutaVC.swift in Sources */,
+				45E2AFF421AF237C001D2316 /* Trokut.swift in Sources */,
 				45E2AFC821AF21BE001D2316 /* SecondViewController.swift in Sources */,
 				45E2AFC421AF21BE001D2316 /* AppDelegate.swift in Sources */,
 				45E2AFC621AF21BE001D2316 /* FirstViewController.swift in Sources */,
+				45E2AFFE21AF350D001D2316 /* helpers.swift in Sources */,
+				45E2B00021AF3761001D2316 /* TrokutCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
